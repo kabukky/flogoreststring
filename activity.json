@@ -1,0 +1,59 @@
+{
+    "name": "kabukky-rest-string",
+    "type": "flogo:activity",
+    "ref": "github.com/kabukky/flogoreststring",
+    "version": "0.0.1",
+    "title": "Invoke REST Service Returning String Kabukky",
+    "description": "Simple REST String Activity Kabukky",
+    "homepage": "https://github.com/kabukky/flogoreststring",
+    "input":[
+      {
+        "name": "method",
+        "type": "string",
+        "required": true,
+        "allowed" : ["GET", "POST", "PUT", "PATCH", "DELETE"]
+      },
+      {
+        "name": "uri",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "proxy",
+        "type": "string",
+        "required": false
+      },
+      {
+        "name": "pathParams",
+        "type": "params"
+      },
+      {
+        "name": "queryParams",
+        "type": "params"
+      },
+      {
+        "name": "header",
+        "type": "params"
+      },
+      {
+        "name": "skipSsl",
+        "type": "boolean",
+        "value": "false"
+      },
+      {
+        "name": "content",
+        "type": "any"
+      }
+    ],
+    "output": [
+      {
+        "name": "result",
+        "type": "string"
+      },
+      {
+        "name": "status",
+        "type": "integer"
+      }
+    ]
+  }
+  
